@@ -3,7 +3,7 @@ require_once 'config.php';
 
 // --- CONFIGURATION SETUP ---
 // 1. Paste your copied Discord Webhook URL between the single quotes below
-$discord_webhook_url = 'PASTE_YOUR_DISCORD_WEBHOOK_URL_HERE';
+$discord_webhook_url = 'https://discord.com/api/webhooks/1547260904247136266/p8tilxmLNr2snRPFpt77fOf8ronStYzBnRF-SBia7qXNjxR_KU87qFwN5FIpRfjCh0fk';
 
 // 2. Paste your Kotak 811 UPI ID here (e.g., "9876543210@kotak" or "yourname@kotak")
 $your_upi_id = "PASTE_YOUR_KOTAK_UPI_ID_HERE"; 

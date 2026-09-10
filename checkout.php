@@ -93,9 +93,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             <p>Scan this QR code using any UPI App (BHIM, PhonePe, Paytm, GooglePay) to complete payment:</p>
             
-            <div class="qr-container">
-                <img src="<?php echo $qr_image_url; ?>" alt="Payment QR Code" width="250" height="250">
-            </div>
+            <!-- Display your personal static QR code image -->
+<img src="my-qr.png" alt="Payment QR Code" style="width: 250px; height: 250px; display: block; margin: 20px auto;">
             
             <div class="alert-msg">
                 ⚠️ After payment finishes, please wait. Staff profile <strong>@<?php echo $target_admin; ?></strong> has been pinged on Discord to verify your transaction!

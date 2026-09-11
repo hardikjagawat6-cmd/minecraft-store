@@ -87,9 +87,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <!-- Display your personal static QR code image -->
 <img src="my-qr.png" alt="Payment QR Code" style="width: 250px; height: 250px; display: block; margin: 20px auto;">
             
-            <div class="alert-msg">
-                ⚠️ After payment finishes, please wait. Staff profile <strong>@<?php echo $target_admin; ?></strong> has been pinged on Discord to verify your transaction!
-            </div>
+            <form action="success.php" method="GET">
+    <button type="submit" style="background-color: #007bff; color: white; padding: 12px; border: none; border-radius: 4px; font-size: 16px; font-weight: bold; width: 100%; cursor: pointer; margin: 15px 0;">
+        ✅ I Have Completed My Payment
+    </button>
+</form>
+
         </div>
     </body>
     </html>

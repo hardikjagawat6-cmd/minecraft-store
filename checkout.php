@@ -1,5 +1,4 @@
 <?php
-require_once 'config.php';
 
 // --- CONFIGURATION SETUP ---
 // 1. Paste your copied Discord Webhook URL between the single quotes below
@@ -23,14 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($rank == "God") $price = 400;
     if ($rank == "vip") $price = 300;
     if ($rank == "Deadliest") $price = 200;
-
-    // Save purchase logging to your Cloud MySQL Database
-    $sql = "INSERT INTO purchases (username, rank_name, status) VALUES (:username, :rank_name, :status)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':username', $player);
-    $stmt->bindParam(':rank_name', $rank);
-    $stmt->bindParam(':status', $status);
-    $stmt->execute();
 
     // Generate plain string structure for instant UPI payment app hooks
     $upi_text = "upi://pay?pa=" . urlencode($your_upi_id) . "&pn=MinecraftStore&am=" . $price . "&cu=INR&tn=" . urlencode("Rank_" . $rank . "_For_" . $player);
